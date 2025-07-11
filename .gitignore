@@ -198,3 +198,5 @@ cython_debug/
 
 # User-specific static files
 budgetron/static/reports/*
+
+src/data
