@@ -25,5 +25,6 @@ def simulate_queue(data):
     data['start_time'] = start_times
     data['end_time'] = end_times
     data['waiting_time'] = waiting_times
+    data['idle_time'] = idle_times
 
     return data
