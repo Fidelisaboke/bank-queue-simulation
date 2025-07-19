@@ -18,5 +18,5 @@ def generate_customer_data(n_customers=500, seed=42):
         'inter_arrival_time': inter_arrival_times,
         'service_time': service_times
     })
-    data.to_csv('data/customer_data.csv', index=False)
+    data.to_csv('../data/customer_data.csv', index=False)
     return data
