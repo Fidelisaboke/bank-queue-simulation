@@ -21,20 +21,26 @@ def compute_metrics(simulated_data):
 
     avg_waiting_time = simulated_data['waiting_time'].mean()
     avg_service_time = simulated_data['service_time'].mean()
+    avg_inter_arrival_time = simulated_data['inter_arrival_time'].mean()
     avg_time_in_system = simulated_data['time_in_system'].mean()
     server_utilization = total_service_time / total_simulation_time
     avg_idle_time = simulated_data['idle_time'].mean()
     max_queue_length = compute_max_queue_length(simulated_data)
+    pr_wait = (simulated_data['waiting_time'] > 0).mean()
+    pr_idle = total_idle_time / total_simulation_time
 
     metrics = {
         'Total Customers': total_customers,
         'Total Simulation Time (min)': total_simulation_time,
         'Average Waiting Time (min)': avg_waiting_time,
         'Average Service Time (min)': avg_service_time,
+        'Average Time Between Arrivals (min)': avg_inter_arrival_time,
         'Average Time in System (min)': avg_time_in_system,
         'Server Utilization (%)': server_utilization * 100,
         'Average Idle Time (min)': avg_idle_time,
-        'Max Queue Length': max_queue_length
+        'Max Queue Length': max_queue_length,
+        'Probability of Customer Waiting in Queue': pr_wait,
+        'Probability that System is idle': pr_idle
     }
 
     print("\n Performance Metrics ")
