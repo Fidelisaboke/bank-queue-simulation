@@ -1,7 +1,3 @@
-Here's the cleaned-up and fully reformatted version of your `REPORT.md` in **concise, professional Markdown**, ready to go with plot attachments:
-
----
-
 # ICS 4106 - Computer Simulation and Modelling
 
 ## Group Assignment: Single-Server Bank Queue Simulation
